@@ -7,7 +7,7 @@ function Header() {
   return (
     <header className="header">
 
-      <div className="logo">
+      <div className="logo1">
        
         <h1 className="logo-heading">
           SA
