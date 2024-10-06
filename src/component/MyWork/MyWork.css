@@ -1,0 +1,18 @@
+.mywork{
+    
+        
+        width: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: bisque;
+        border-radius: 8px;
+        margin: 50px;
+        box-shadow: 0 6px 16px rgb(253, 0, 0); /* Adds a subtle shadow for depth */
+        transition: transform 0.3s ease; /* Smooth animation on hover */
+}
+.mywork:hover{
+    
+        transform: scale(1.4); /* Slightly enlarges the skill card on hover */
+    
+}

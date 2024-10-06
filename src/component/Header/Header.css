@@ -14,10 +14,11 @@
     justify-content: space-between;
     padding: 30px;
 
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6)
+    /* box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6) */
 
 
 }
+
 .NavIcon{
     display: flex;
     align-items: center;
@@ -52,6 +53,7 @@ a{
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2)
 
 }
+
 
 
 
