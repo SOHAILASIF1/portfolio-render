@@ -9,6 +9,8 @@ import About from './pages/About/About';
 import NotFound from './pages/NotFound';
 import Footer from './component/Footer/Footer';
 import Project from './pages/project/Project';
+import Resume from './pages/resume/Resume';
+import Contact from './pages/Contact/Contact';
 
 function App() {
 
@@ -21,6 +23,9 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route  path='/about' element={<About/>}/>
         <Route path="/projects" element={<Project />} />
+        <Route path="/projects" element={<Project />} />
+      <Route path='/resume' element={<Resume/>}/>
+      <Route path='/contact' element={<Contact/>}/>
       </Routes>
       <Footer/>
     </BrowserRouter>

@@ -5,7 +5,7 @@ import './Skillset.css'
 function Skillset({icon}) {
   return (
     <div className='skill'>
-      <div className='skill-item'>{icon}</div>
+      <div className='skills-container'>{icon}</div>
       
     </div>
   );

@@ -1,12 +1,12 @@
 import React from 'react'
 import './MyWork.css'
 
-function MyWork() {
+function MyWork({img,tittle,disc}) {
   return (
     <div className='mywork'>
-        <img src='' alt=''/>
-        <h4>Book Store</h4>
-        <p>Here are a few projects I've worked on recently.</p>
+        <img src={img} alt=''/>
+        <h4>{tittle}</h4>
+        <p>{disc}</p>
         <a href=''>Github</a>
 
 

@@ -35,12 +35,15 @@
     border: none;
     
     border-radius: 20px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2)
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    background-color: #4CAF50;
 
 }
 .Heading{
-    font-size: 40px;
+    font-size: 00px;
+    
     color: aliceblue;
+    
 }
 .button{
     margin-top: 40px;
@@ -61,9 +64,10 @@
     text-align: center;
 }
 .paragraph{
-    font-size: 30px;
+    font-size: 22px;
     color:  white;
     padding: 22px 60px;
+    text-align: justify;
     
 }
 #home{
@@ -74,4 +78,7 @@
     width: 100%;
     height: 100vh;
 
+}
+.box-1 h1{
+    font-size: 60px;
 }

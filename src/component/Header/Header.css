@@ -31,26 +31,43 @@
 ul,li{
     list-style:   none;
    color: #fff;
+   font-size: 20px;
 
     
     margin: 18px;
 }
 a{
     text-decoration: none;
-    font-size: 18px;
+    font-size: 21px;
    color: #fff;
 
 }
 .logo1{
-   color: #fff;
+      
+display: flex;
+    
 
+
+
+align-items: center;
+justify-content: center;
+height: 100%;
+margin-right: 20px;
+
+}
+.logo1 svg{
+    height: 60px; /* Set a fixed height for the logo */
+    
+   
+width: auto; 
 }
 .btn{
     padding: 12px;
     border: none;
     
     border-radius: 20px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2)
+    box-shadow: 0 4px 15px #4CAF50;
+    background-color: #4CAF50;
 
 }
 

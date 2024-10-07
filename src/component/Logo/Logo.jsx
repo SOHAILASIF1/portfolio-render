@@ -5,7 +5,9 @@ import './Logo.css'
 function Logo({tittle}) {
   return (
     <div className='logo'>
-        <div>{tittle}</div>
+      <a href=''>
+        {tittle}
+        </a>
 
 
     </div>

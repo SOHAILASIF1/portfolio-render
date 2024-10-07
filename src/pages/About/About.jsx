@@ -12,7 +12,10 @@ import { SiExpress } from "react-icons/si";
 import { SiMongodb } from "react-icons/si";
 
 const skills=[
-  <FaHtml5/>,<FaCss3/>,<FaJsSquare/>,<FaReact/>,<FaNode/>,<SiExpress/>,<SiMongodb/>,<FaHtml5/>,<FaCss3/>,<FaJsSquare/>,<FaReact/>,<FaNode/>,<SiExpress/>,<SiMongodb/>
+  <FaHtml5/>
+  
+
+  ,<FaCss3/>,<FaJsSquare/>,<FaReact/>,<FaNode/>,<SiExpress/>,<SiMongodb/>,<FaHtml5/>,<FaCss3/>,<FaJsSquare/>,<FaReact/>,<FaNode/>,<SiExpress/>,<SiMongodb/>
 ]
 const Tools=[
   "VS CODE" , "GitHub" , "Sohail","VS CODE" , "GitHub" , "Sohail","VS CODE" , "GitHub" , "Sohail"

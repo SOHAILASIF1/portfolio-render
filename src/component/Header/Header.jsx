@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css'
+import SALogo from '../SaLogo';
 
 
 function Header() {
@@ -9,9 +10,7 @@ function Header() {
 
       <div className="logo1">
        
-        <h1 className="logo-heading">
-          SA
-        </h1>
+        <SALogo/>
         </div>
 
         {/* Navigation Links */}
@@ -43,10 +42,10 @@ function Header() {
             </li>
             <li>
               <Link
-                to="/experience"
+                to="/resume"
                 className=""
               >
-                Experience
+                Resume
               </Link>
             </li>
             <li>

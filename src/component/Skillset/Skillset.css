@@ -1,3 +1,12 @@
+/* Parent container of the .skill */
+.skills-container {
+    display: flex;
+    align-items: center; /* Vertically centers the items */
+    justify-content: center; /* Horizontally centers the items */
+    flex-wrap: wrap; /* Wraps multiple skill items if needed */
+    height: 100vh; /* Full viewport height to demonstrate centering */
+}
+
 .skill {
     height: 100px;
     width: 100px;
@@ -6,14 +15,16 @@
     justify-content: center;
     background-color: bisque;
     border-radius: 8px;
-    margin: 50px;
-    box-shadow: 0 6px 16px rgb(253, 0, 0); /* Adds a subtle shadow for depth */
-    transition: transform 0.3s ease; /* Smooth animation on hover */
+    margin: 20px; /* Reduce margin to avoid pushing too far out */
+    box-shadow: 0 6px 16px #4CAF50;
+    transition: transform 0.3s ease;
 }
+
 .skill:hover {
     transform: scale(1.4); /* Slightly enlarges the skill card on hover */
 }
-.skill-item{
+
+.skill-item {
     width: 70%;
     height: 70%;
 }
