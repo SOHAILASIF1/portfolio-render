@@ -1,80 +1,70 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import './Header.css'
+import './Header.css';
 import SALogo from '../SaLogo';
-
+import { FaBars, FaTimes } from 'react-icons/fa'; // Import hamburger icons
 
 function Header() {
-  return (
-    <header className="header">
+  const [menuOpen, setMenuOpen] = useState(false); // State to handle menu toggle
 
-      <div className="logo1">
-       
-        <SALogo/>
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  // Prevent background scrolling when menu is open
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [menuOpen]);
+
+  return (
+    <>
+      <header className="header">
+        <div className="logo1">
+          <SALogo/>
+        </div>
+
+        {/* Hamburger Menu Button */}
+        <div 
+          className="menu-button" 
+          onClick={toggleMenu}
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={menuOpen}
+        >
+          {menuOpen ? <FaTimes /> : <FaBars />}
         </div>
 
         {/* Navigation Links */}
-        <nav className=''>
-          <ul className=" NavIcon">
+        <nav>
+          <ul className={`NavIcon ${menuOpen ? 'open' : ''}`}>
             <li>
-              <Link
-                to="/"
-                className=""
-              >
-                Home
-              </Link>
+              <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
             </li>
             <li>
-              <Link
-                to="/about"
-                className=""
-              >
-                About
-              </Link>
+              <Link to="/about" onClick={() => setMenuOpen(false)}>About</Link>
             </li>
             <li>
-              <Link
-                to="/projects"
-                className=""
-              >
-                Projects
-              </Link>
+              <Link to="/projects" onClick={() => setMenuOpen(false)}>Projects</Link>
             </li>
             <li>
-              <Link
-                to="/resume"
-                className=""
-              >
-                Resume
-              </Link>
+              <Link to="/resume" onClick={() => setMenuOpen(false)}>Resume</Link>
             </li>
             <li>
-              <Link
-                to="/contact"
-                className=""
-              >
-                Contact Us
-              </Link>
+              <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact Us</Link>
+            </li>
+            <li>
+              <a href="/resume.pdf" download className="btn">Download CV</a>
             </li>
           </ul>
-
-         
         </nav>
+      </header>
 
-        {/* Download Button */}
-        <div className="">
-          <a
-            href="/resume.pdf" // Update this path to your actual CV file
-            download
-            className="btn"
-          >
-            Download CV
-          </a>
-        </div>
-     
-
-        
-    </header>
+      {/* Backdrop */}
+      {menuOpen && <div className="backdrop open" onClick={toggleMenu}></div>}
+    </>
   );
 }
 

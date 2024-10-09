@@ -13,6 +13,47 @@
 
     
 }
+/* Contact.css */
+
+.contact {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .input {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .input-heading {
+    margin-bottom: 20px;
+  }
+  
+  .input-box {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input-box input,
+  .input-box textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .btn {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .response-message {
+    margin-top: 15px;
+    font-size: 16px;
+    color: green; /* Change color based on success or error */
+  }
+  
 .input-heading{
     width: 50%;
     padding: 20px;
@@ -54,4 +95,13 @@
 }
 .input-box textarea::placeholder{
     color: white;
+}
+@media (max-width: 768px){
+    .input{
+        flex-direction: column;
+    }
+    .input-heading{
+        display: none;
+    }
+
 }

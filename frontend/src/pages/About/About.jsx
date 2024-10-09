@@ -10,12 +10,17 @@ import { FaReact } from "react-icons/fa";
 import { FaNode } from "react-icons/fa6";
 import { SiExpress } from "react-icons/si";
 import { SiMongodb } from "react-icons/si";
+import { FaBootstrap } from "react-icons/fa6";
+import { RiTailwindCssLine } from "react-icons/ri";
+import { FiFigma } from "react-icons/fi";
+import { SiRedux } from "react-icons/si";
+
 
 const skills=[
   <FaHtml5/>
   
 
-  ,<FaCss3/>,<FaJsSquare/>,<FaReact/>,<FaNode/>,<SiExpress/>,<SiMongodb/>,<FaHtml5/>,<FaCss3/>,<FaJsSquare/>,<FaReact/>,<FaNode/>,<SiExpress/>,<SiMongodb/>
+  ,<FaCss3/>,<FaJsSquare/>,<FaReact/>,<FaNode/>,<SiExpress/>,<SiMongodb/>,<FaBootstrap/>,<RiTailwindCssLine/>,<FiFigma/>,<SiRedux/>
 ]
 const Tools=[
   "VS CODE" , "GitHub" , "Sohail","VS CODE" , "GitHub" , "Sohail","VS CODE" , "GitHub" , "Sohail"

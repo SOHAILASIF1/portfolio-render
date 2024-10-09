@@ -5,7 +5,7 @@ import './Logo.css'
 function Logo({tittle}) {
   return (
     <div className='logo'>
-      <a href=''>
+      <a href='https://github.com/SOHAILASIF1' target='_blank'>
         {tittle}
         </a>
 

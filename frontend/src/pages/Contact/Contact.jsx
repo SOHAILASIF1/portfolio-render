@@ -1,7 +1,9 @@
+// Contact.js
 import React, { useState } from 'react';
 import './Contact.css';
 import Headings from '../../component/Headings/Headings';
 import FindMe from '../../component/FindMe/FindMe';
+import axios from 'axios';
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -9,6 +11,9 @@ function Contact() {
     email: '',
     message: ''
   });
+
+  const [responseMessage, setResponseMessage] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -18,16 +23,36 @@ function Contact() {
   };
 
   const handleSubmit = async (e) => {
-    console.log(formData);
     e.preventDefault();
-    fwn`O `
+
+    setIsLoading(true); // Start loading
+
+    try {
+      const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/contact/send`, formData);
+
+      if (response.data.success) {
+        setResponseMessage('Your message has been sent successfully!');
+        setFormData({
+          name: '',
+          email: '',
+          message: ''
+        });
+      } else {
+        setResponseMessage('Something went wrong. Please try again later.');
+      }
+    } catch (error) {
+      console.error('Error sending message:', error);
+      setResponseMessage('Failed to send message. Please try again later.');
+    }
+
+    setIsLoading(false); // End loading
   };
 
   return (
     <div className='contact'>
       <div className="input">
         <div className='input-heading'>
-          <Headings tittle="Headings" />
+          <Headings tittle="Contact" span="Me" />
         </div>
         <form className="input-box" onSubmit={handleSubmit}>
           <input
@@ -55,8 +80,11 @@ function Contact() {
             onChange={handleChange}
             required
           />
-          <button className='btn' type='submit'>Send</button>
+          <button className='btn' type='submit' disabled={isLoading}>
+            {isLoading ? 'Sending...' : 'Send'}
+          </button>
         </form>
+        {responseMessage && <p className="response-message">{responseMessage}</p>}
       </div>
       <FindMe />
     </div>
