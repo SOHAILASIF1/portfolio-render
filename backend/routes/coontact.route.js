@@ -17,7 +17,7 @@ router.post('/send', async (req, res) => {
     });
 
     // Set up mail options
-    const mailOptions = {
+    const mailOptions  = {
       from: email, // sender address
       to: process.env.RECEIVER_EMAIL, // receiver email
       subject: `Contact form submission from ${name}`,
