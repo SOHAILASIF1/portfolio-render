@@ -13,7 +13,7 @@ function Project() {
   const getPortfolioData = async () => {
     try {
       dispatch(ShowLoading()); // Show loading before API call
-      const response = await axios.get('http://localhost:7000/api/getData'); // Replace with localhost link
+      const response = await axios.get(`${window.location.origin}/api/getData`); // Replace with localhost link
       dispatch(SetPortfolioData(response.data.projects)); // Assuming portfolioData contains a "projects" array
       dispatch(HideLoading()); // Hide loading after success
     } catch (error) {

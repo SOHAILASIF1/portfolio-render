@@ -56,7 +56,7 @@ function Header() {
               <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact Us</Link>
             </li>
             <li>
-              <a href="/resume.pdf" download className="btn">Download CV</a>
+              <a href="/cv.pdf" download className="btn">Download CV</a>
             </li>
           </ul>
         </nav>

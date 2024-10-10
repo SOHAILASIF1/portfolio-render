@@ -2,12 +2,12 @@ import React from 'react';
 import './Skillset.css'
 
 
-function Skillset({icon}) {
+function Skillset({icon,skillName}) {
   return (
-    <div className='skill'>
-      <div className='skills-container'>{icon}</div>
-      
-    </div>
+    <div className='skill' data-skill-name={skillName}>
+  <div className='skills-container'>{icon}</div>
+</div>
+
   );
 }
 

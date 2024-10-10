@@ -14,10 +14,11 @@ function Footer() {
         <p id="paragraph">Copyright © 2024
 brand</p>
         <div className='footer-icon'>
-        <Logo tittle={<TiSocialLinkedin />}/>
+        <Logo link="https://www.linkedin.com/in/sohail-asif-40a95b264/" tittle={<TiSocialLinkedin />}/>
         <Logo tittle={<TiSocialFacebook/>}/>
-        <Logo tittle={<FaGithub/>}/>
-        <Logo tittle={<MdOutlineWhatsapp/>}/>
+        <Logo link='htttps://github.com/SOHAILASIF1' tittle={<FaGithub/>}/>
+        <Logo link="https://wa.me/923063683343
+" tittle={<MdOutlineWhatsapp/>}/>
 
 
         </div>

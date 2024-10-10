@@ -8,12 +8,13 @@ function Resume() {
         <Headings tittle="Resume" span="Download"/>
 
       <div className='heading-comp'>  <a 
-            href="/resume.pdf"
+            href="/cv.pdf"
             download
             className='btn'
           >
             Download CV
           </a></div>
+          
     </div>
   )
 }

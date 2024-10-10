@@ -12,10 +12,11 @@ function FindMe() {
         <h1 className='Heading'>FIND ME ON</h1>
         <p id="paragraph">Please don't hesitate to reach out to me and connect</p>
         <div className='profile'>
-            <a href=''><Logo tittle={<TiSocialLinkedin />}/></a>
+            <a href=''><Logo link="https://www.linkedin.com/in/sohail-asif-40a95b264/" tittle={<TiSocialLinkedin />}/></a>
             <a href=''><Logo tittle={<TiSocialFacebook/>}/></a>
-            <a target='_blank' href='htttps://github.com/SOHAILASIF1'><Logo tittle={<FaGithub/>}/></a>
-            <a href=''><Logo tittle={<MdOutlineWhatsapp/>}/></a>
+            <a target='_blank' href=''><Logo link='htttps://github.com/SOHAILASIF1' tittle={<FaGithub/>}/></a>
+            <a href=''><Logo link="https://wa.me/923063683343
+" tittle={<MdOutlineWhatsapp/>}/></a>
 
 
         </div>

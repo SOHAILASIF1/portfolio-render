@@ -14,16 +14,31 @@ import { FaBootstrap } from "react-icons/fa6";
 import { RiTailwindCssLine } from "react-icons/ri";
 import { FiFigma } from "react-icons/fi";
 import { SiRedux } from "react-icons/si";
+import { VscVscode } from "react-icons/vsc";
+import { FaGithub } from "react-icons/fa";
+import { SiPostman } from "react-icons/si";
+import { FaGitAlt } from "react-icons/fa";
 
 
-const skills=[
-  <FaHtml5/>
-  
-
-  ,<FaCss3/>,<FaJsSquare/>,<FaReact/>,<FaNode/>,<SiExpress/>,<SiMongodb/>,<FaBootstrap/>,<RiTailwindCssLine/>,<FiFigma/>,<SiRedux/>
-]
+const  skills = [
+  { icon: <FaHtml5 />, name: 'HTML5' },
+  { icon: <FaCss3 />, name: 'CSS3' },
+  { icon: <FaJsSquare />, name: 'JavaScript' },
+  { icon: <FaReact />, name: 'React' },
+  { icon: <FaNode />, name: 'Node.js' },
+  { icon: <SiExpress />, name: 'Express' },
+  { icon: <SiMongodb />, name: 'MongoDB' },
+  { icon: <FaBootstrap />, name: 'Bootstrap' },
+  { icon: <RiTailwindCssLine />, name: 'Tailwind CSS' },
+  { icon: <FiFigma />, name: 'Figma' },
+  { icon: <SiRedux />, name: 'Redux' }
+];
 const Tools=[
-  "VS CODE" , "GitHub" , "Sohail","VS CODE" , "GitHub" , "Sohail","VS CODE" , "GitHub" , "Sohail"
+  {icon:<VscVscode/>,name:"VS CODE"},
+  {icon:<FaGithub/>,name:"Github"},
+  {icon:<SiPostman/>,name:"Postman"},
+  {icon:<FaGitAlt/>,name:"Git"},
+
 ]
 
 function About() {
@@ -34,14 +49,14 @@ function About() {
 
     <div className="container-about">
       {skills.map((skill,index)=>(
-        <Skillset key={index} icon={skill}/>
+        <Skillset key={index} icon={skill.icon} skillName={skill.name}/>
 
       ))}
     </div>
     <Headings tittle='Tool I ' span="Use"/>
     <div className="container-about">
       {Tools.map((tool,index)=>(
-        <Skillset key={index} icon={tool}/>
+        <Skillset key={index} icon={tool.icon} skillName={tool.name}/>
 
       ))}
     </div>

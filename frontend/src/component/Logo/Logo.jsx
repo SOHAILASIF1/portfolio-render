@@ -2,10 +2,10 @@ import React from 'react'
 import './Logo.css'
 
 
-function Logo({tittle}) {
+function Logo({tittle,link}) {
   return (
     <div className='logo'>
-      <a href='https://github.com/SOHAILASIF1' target='_blank'>
+      <a href={link} target='_blank'>
         {tittle}
         </a>
 
