@@ -13,11 +13,12 @@ function Project() {
   const getPortfolioData = async () => {
     try {
       dispatch(ShowLoading()); // Show loading before API call
-      const response = await axios.get(`https://portfolio-render-uvwf.onrender.com/getData`); // Replace with localhost link
+      const response = await axios.get("https://portfolio-render-uvwf.onrender.com/api/getData"); // Replace with localhost link if testing locally
       dispatch(SetPortfolioData(response.data.projects)); // Assuming portfolioData contains a "projects" array
-      dispatch(HideLoading()); // Hide loading after success
     } catch (error) {
-      dispatch(HideLoading()); // Ensure loading is hidden on error
+      console.error("Error fetching portfolio data:", error); // Log the error for debugging
+    } finally {
+      dispatch(HideLoading()); // Ensure loading is hidden after API call completes
     }
   };
 
@@ -29,21 +30,20 @@ function Project() {
 
   return (
     <div className='projects'>
-      <Headings tittle="Project I" span="Made" />
+      <Headings title="Project I" span="Made" />
       <p></p>
-      {loading && (
-  <div className="spinner-container">
-    <div className="spinner"></div>
-    <div className="loading-text">Loading...</div>
-  </div>
-)}
- {/* Display loading state */}
+      {loading && ( // Display loading state
+        <div className="spinner-container">
+          <div className="spinner"></div>
+          <div className="loading-text">Loading...</div>
+        </div>
+      )}
       <div className="project-container">
-        {portfolioData &&
+        {portfolioData && // Ensure portfolioData exists before mapping
           portfolioData.map((project, index) => (
             <MyWork
               key={index}
-              tittle={project.tittle}
+              title={project.title} // Corrected the spelling of "tittle" to "title"
               img={project.img}
               disc={project.disc}
               url={project.url}
