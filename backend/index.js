@@ -17,7 +17,7 @@ const PORT = process.env.PORT || 7000;
 const __dirname = path.resolve()
 
 app.use(cors({
-    origin: "https://portfolio-render-uvwf.onrender.com", // Replace '*' with your frontend URL in production
+    origin: "https://portfolio-render-xs4w.onrender.com", // Replace '*' with your frontend URL in production
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true // Allow credentials
   }));
