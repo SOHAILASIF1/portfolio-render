@@ -28,7 +28,7 @@ function Contact() {
     setIsLoading(true); // Start loading
 
     try {
-      const response = await axios.post(`${window.location.origin}/api/contact/send`, formData);
+      const response = await axios.post(`https://portfolio-render-uvwf.onrender.com/api/contact/send`, formData);
 
       if (response.data.success) {
         setResponseMessage('Your message has been sent successfully!');
