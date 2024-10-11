@@ -13,7 +13,7 @@ function Project() {
   const getPortfolioData = async () => {
     try {
       dispatch(ShowLoading()); // Show loading before API call
-      const response = await axios.get("https://portfolio-render-uvwf.onrender.com/api/getData"); // Replace with localhost link
+      const response = await axios.get("https://portfolio-render-xs4w.onrender.com/api/getData"); // Replace with localhost link
       dispatch(SetPortfolioData(response.data.projects)); // Assuming portfolioData contains a "projects" array
       dispatch(HideLoading()); // Hide loading after success
     } catch (error) {
