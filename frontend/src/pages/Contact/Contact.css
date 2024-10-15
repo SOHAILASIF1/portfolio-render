@@ -46,6 +46,8 @@
     padding: 10px;
     font-size: 16px;
     cursor: pointer;
+    width:240px;
+    
   }
   
   .response-message {
